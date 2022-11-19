@@ -1,0 +1,10 @@
+const Name= "Гомбо";
+const Surname= "Батуев";
+const Birthday = new Date(1991 ,2, 26);
+const Place = "Улан-Удэ";
+let now = new Date();
+let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+let age;
+age = today.getFullYear() - Birthday.getFullYear();
+let IAM = `Меня зовут ${Name+" "+ Surname}. ${Place} - мой родной город, где Я и живу. Мне ${age} год `;
+console.log(IAM);
