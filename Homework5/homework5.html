@@ -1,164 +1,159 @@
 <!DOCTYPE html>
-<html>
+ <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-        <title>FLEXBOX</title>
         <style>
             body {
-             background: linear-gradient(to right,#00416A, #E4E5E6);
-             font-family: 'Oswald', sans-serif;
+            height: 100%;
+            background: linear-gradient(to right,#3eb6ee, #eea25f);
+            font-family: 'Oswald', sans-serif;
+            
             }
-            header {
-             background: linear-gradient(to right,#81b6f1, #209ef1);
-             font-size: 50px;
-             color: transparent;
-             background-clip: text;
-             -webkit-background-clip: text;
+            .h {
+                color: transparent;
+                opacity: 0.7;
+                background: linear-gradient(to left, #82c5d6, #424242);
+                background-clip: text;
+                -webkit-background-clip: text;
+                font-size: 30px;
+            }
+            .header {
+            text-align: center;
+            font-size: 50px;
+            font-weight: 900;
+            background: linear-gradient(to left, #ff8c09, #004cf0);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
             }
             .first {
-             padding: 10px;
-             margin: 10px;
-             background: rgb(185, 217, 238);
-             width: 300px;
-             height: 950px;
-             border-radius: 5px;
-             transition: .3s;
-             }
-            
-            .first:hover {
-                transform: scale(1.1);
-                z-index: 1;
-             }
-             .second {
-             padding: 10px;
-             margin: 10px;
-             background: rgb(235, 236, 165);
-             width: 300px;
-             height: 950px;
-             border-radius: 5px;
-             transition: .3s;
-
-             }
-            .second:hover {
-                transform: scale(1.1);
-                z-index: 1;
-             }
-            .third {
-             padding: 10px;
-             margin: 10px;
-             background: rgb(0, 0, 0);
-             width: 300px;
-             height: 950px;
-             border-radius: 5px;
-             transition: .3s;
-             color: azure;
-             }
-            .third:hover {
-              transform: scale(1.1);
-              z-index: 1; 
-            } 
-            .fourth {
-             padding: 10px;
-             margin: 10px;
-             background: rgb(14,14,14);
-             width: 300px;
-             height: 950px;
-             border-radius: 5px;
-             transition: .3s;
-             color: aliceblue;
+                display: inline-block;
+                color:rgb(14, 13, 13);
             }
-            .fourth:hover {
-             transform: scale(1.1);
-             z-index: 1;
+            .second {
+                background-color: rgb(148, 190, 245);
+            }
+            .third {
+                background-color:rgb(252, 208, 127);
+            }
+            .fourth {
+                display: none;
+            }
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 20px;
+                width: 120px;
+                height: 180px;
+                border: 2px solid rgb(224, 100, 84);
             }
             .fifth {
-             padding: 10px;
-             margin: 10px;
-             background: linear-gradient(to right,#60fc9c, #eff160 );
-             width: 300px;
-             height: 950px;
-             border-radius: 5px;
-             transition: .3s;  
+                border: 1px solid rgb(3, 18, 37);
+                padding: 5px;
             }
-            .fifth:hover {
-             transform: scale(1.1);
-             z-index: 1;
+            .sixth {
+                display: block;
+                width: 150px;
+                height: 150px;
+                background: rgba(248, 124, 53, 0.979);
+                border: 1px solid #0e0d0d;
+                align-items: center;
+                text-align: center;
             }
-            .flex {
-             display: flex;
-             flex-direction: row-reverse;
-             justify-content: center;
-             align-items: center;
+            .content {
+                width: 140px;
+                min-height: 100px;
+                margin: auto;
+                background: rgb(61, 139, 241);
+                border: 3px solid #0e0d0d;
+                position: relative;
+                top: 30px;
+                justify-content: center;
             }
-            .img {
-             border-radius: 10px;
+            .seventh {
+                display:block;
+                position: absolute;
+                top: 1080px;
+                left: 150px;
+                width: 120px;
+                height: 100px;
+                margin: auto;
+                background:rgb(84, 141, 216);
+                border: 3px solid #0e0d0d;
+                text-align: center;
+                align-items: center;
             }
-            .button1     {
-             width: 100%;
-             height: 30px;
-             position: relative;
-             bottom: 0;
-             left: 0;
-             display: flex;
-             align-items: center;
-             justify-content: center;
+            .module {
+                display: flex;
+                flex-direction: row-reverse;
+                background-color: #ff9067;
+                margin: 100px;
+                width:800px;
+                justify-content: center;
             }
-
-            .button2      {
-             display: inline-block;
-             text-decoration: none;
-             }
-      </style>
+            .container {
+                display: block;
+                border: 1px solid #563600;
+                width: 400px;
+                height: 400px;
+                margin: 30px;
+                align-items: center;
+            }
+            
+        </style>
     </head>
     <body>
-        <header>
-            <h>ПОЗИЦИОНИРОВАНИЕ FLEXBOX</h>
-            <br>
-            <h>Топ самых ожидаемых игр 2022-23</h>
-       </header>
-       <br>
-        <div class="flex">
-         <div class="first">
-            <h1><img src="https://static.wikia.nocookie.net/logopedia/images/b/b3/GOW_Ragnar%C3%B6k_logo.png/revision/latest?cb=20210917142135" width="280px"></h1>
-            <div>В сиквеле лучшей по версии The Game Awards игры 2018 года Кратос и Атрей должны будут посетить девять королевств и найти там союзников. Ведь совсем скоро начнётся кровопролитная битва и наступит Рагнарёк, к которому вовсю готовятся армии Асгарда.Параллельно продолжит развиваться тема отцов и детей, которой была полностью посвящена первая часть. Повзрослевший Атрей будет пытаться понять, какова его настоящая роль и что о нём говорят пророчества. А Кратосу предстоит определиться — забыть о прошлом и стать для Атрея настоящим отцом или продолжать беспокоиться о возможном повторении старых ошибок.</div>
-            <br>
-            <p><img src="https://assets-prd.ignimgs.com/2021/09/09/god-of-war-ragnarok-button-1631231879154.jpg" alt="Кратос и Атрей" width="290" height="290" class="img"></p>
-            <br>
-            <div class="button1"><a class="button2" href="https://www.playstation.com/ru-ua/games/god-of-war-ragnarok/"><img src="https://gmedia.playstation.com/is/image/SIEPDC/ps-store-bag-22jun20?$native--t$" width="80px" class="img"></a></div>
+        <div class="header">ПОЗИЦИОНИРОВАНИЕ CSS</div>
+        <h2 class="h">INLINE-BLOCK</h2>
+         <div>
+          <div class="first second">
+            Элементы inline-block   
+          </div>
+          <div class="first third">
+            идут последовательно, справа налево
+          </div>
+         </div><br>
+
+        <h3 class="h">NONE-элемент</h3>
+         <div>Первое правило Бойцовского клуба: не упоминать о Бойцовском клубе.</div>
+         <div class="fourth">Второе правило Бойцовского клуба: не упоминать нигде о Бойцовском клубе</div>
+         <br>
+
+        <h4 class="h">FLEX-свойство</h4>
+         <div class="flex-container">
+          <div class="fifth">VK</div>
+          <div class="fifth">DROM</div>
+          <div class="fifth">Twitter</div>
+          <div class="fifth">Avito</div>
+          <div class="fifth">Youtube</div>
+          <div class="fifth">Auto.ru</div>
          </div>
-         <div class="second">
-            <h2><img src="https://static.wikia.nocookie.net/logopedia/images/7/70/S.T.A.L.K.E.R._2_Heart_of_Chernobyl.png/revision/latest?cb=20220822213854" width="300px"></h2>
-            <div>Похоже, это всё-таки не сон — S.T.A.L.K.E.R. 2 действительно существует и выйдет уже в апреле, а подписчики Game Pass вообще получат её бесплатно. Спустя столько лет мы вернёмся в Чернобыльскую зону отчуждения, где нас вновь ждут страшные аномалии и жуткие мутанты, а также сталкеры, которые охотятся за ценными артефактами и не жалеют тех, кто встаёт между ними и хабаром.</div>
-            <p><img src="https://upload.wikimedia.org/wikipedia/en/8/80/STALKER_2_cover_art.jpg" alt="СТАЛКЕР" width="295px" class="img"></p>
-            <br>
-            <div class="button1"><a class="button2" href="https://www.igromania.ru/game/10175/S.T.A.L.K.E.R._2_Heart_of_Chornobyl.html"><img src="https://upload.wikimedia.org/wikipedia/ru/thumb/0/0d/Igromania_logo.svg/2560px-Igromania_logo.svg.png" width="100px" class="img"></a></div>
+            
+        <h4 class="h">Свойство POSITION</h4>
+         <div class="module">
+           <div class="container">
+           <div>Относительное позиционирование</div>
+           <br>
+           <div class="sixth">
+           <h>СТАТИЧНЫЙ</h>
+           <div class="content">ОТНОСИТЕЛЬНЫЙ</div>
+          </div>
          </div>
-         <div class="third">
-            <h3><img src="https://static.wikia.nocookie.net/starwars/images/8/8c/StarWarsJediSurvivorLogo.svg/revision/latest?cb=20220820224758" width="200px"></h3>
-            <div>Survivor — прямой сиквел Fallen Order. Действие игры разворачивается через пять лет после первой части, главным героем вновь выступает джедай Кэл Кестис. В первом тизере он, судя по всему, вступает в бой с имперским инквизитором. Разработкой игры занимается студия Respawn, которая сделала и Star Wars Jedi: Fallen Order. В студии отметили, что в продолжении старались сделать бои более динамичными, а повествование — более кинематографичным.</div>
-            <p><img src="https://assets-prd.ignimgs.com/2022/05/27/jedisurvivor-1653689648506.jpg" alt="Star Wars" width="290px" class="img"></p>
-            <br>
-            <br>
-            <div class="button1"><a class="button2" href="https://store.epicgames.com/ru/p/star-wars-jedi-survivor"><img src="https://1000logos.net/wp-content/uploads/2021/12/Epic-Games-logo.png" width="150px" class="img"></a></div>
-         </div>
-         <div class="fourth">
-            <h4><img src="https://static.wikia.nocookie.net/battlegrounds_gamepedia_en/images/5/5d/The_Callisto_Protocol-logo.png/revision/latest?cb=20201215032559" width="300px"></h4>
-            <div>The Callisto Protocol — приключенческий хоррор с видом от третьего лица в научно-фантастическом сеттинге. Действие игры разворачивается в 2320 году на Каллисто — замерзшей луне Юпитера, где находится некая тюрьма. Сюжет рассказывает о пилоте грузового корабля Джейкобе Ли, которые оказывается в тюремной колонии, расположенной на спутнике Юпитера Каллисто. Вскоре он выясняет, что почти все люди превратились в мутантов, а поэтому все чего он желает — выжить. </div>
-            <p><img src="https://cdn1.epicgames.com/offer/6b0541b5d9aa476cbf407643ab3b1d7d/EGS_TheCallistoProtocol_StrikingDistanceStudios_S2_1200x1600-1e31eacc92833279f5b7a8d07cd3826c" atl="Callisto Protocol" width="300px" class="img"></p>
-            <br>
-            <div class="button1"><a class="button2" href="https://callisto.sds.com/"><img src=https://static.wikia.nocookie.net/battlegrounds_gamepedia_en/images/5/5d/The_Callisto_Protocol-logo.png/revision/latest?cb=20201215032559" width="150px"></a></div>
-         </div>
-         <div class="fifth">
-            <h5><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Need_for_Speed_Unbound_logo.svg/2560px-Need_for_Speed_Unbound_logo.svg.png" width="300px"></h5>
-            <div>Need for Speed Unbound — продолжение серии аркадных гонок с видом от третьего лица. Новая часть кардинально меняет стиль: все персонажи отныне нарисованные, ровно как и визуальные эффекты вроде нитро и дыма. При этом основная тема та же: нелегальные уличные гонки, игры в кошки-мышки с полицией и прокачка своего авто. Сюжет расскажет историю двух друзей, которые пытаются вернуть украденный семейный автомобиль. Главная цель — выиграть Гранд-заезд — главную уличную гонку Лэйкшора.</div>
-            <p><img src="https://upload.wikimedia.org/wikipedia/en/d/db/Need_for_Speed_Unbound.png" alt="Need For Speed" width="300px" class="img"></p>
-            <br>
-            <div class="button1"><a class="button2" href="https://www.ea.com/ru-ru/games/need-for-speed/need-for-speed-unbound"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Electronic_Arts_Logo_2020.png" width="80px"></a></div>
-         </div>
+             
+    <div class="container">
+         <div><h5>Абсолютное позиционирование</h5></div> 
+         <br>
+          <div class="sixth">
+             <h3>СТАТИЧНЫЙ</h3>
+             <br>
+          <div class="seventh">АБСОЛЮТНЫЙ</div>  
+             <br>  
+          <div class="sixth">
+            <h3>СТАТИЧНЫЙ</h3>
+          </div>
         </div>
+    </div>
+    </div>
+        
     </body>
 
-
-</html>
+ </html>
