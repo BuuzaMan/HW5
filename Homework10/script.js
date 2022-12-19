@@ -11,7 +11,7 @@ for (; i < 5; i++){
 }
 
 
- let ingredients = {
+ let ingredientsCost = {
   mutton: 1020,
   horsemeat:2250,
   beef:400,
@@ -24,22 +24,40 @@ for (; i < 5; i++){
   rice:25,
   sourCream:100,
   flour:25,
-}
- let buuza = {
+  };
+
+ let menu = [
+   {
    name: 'buuza',
    ingredients: ['mutton', 'horsemeat', 'beef', 'onion', 'salt', 'pepper' ],
    price: 1000,
- };
- let sushi = {
+   },
+ 
+  {
   name: 'sushi',
   ingredients: ['salmon', 'cottageCheese', 'cucumber', 'rice'],
   price: 600,
- }
- let salamat = {
+  },
+  {
   name: 'salamat',
   ingredients: ['flour', 'sourCream', 'salt'],
   price: 250,
+  }
+ ];
 
- }
- let menu=['buuza','sushi','salamat'];
+ for (let i=0; i < menu.length; i++) {
+  let cost = 0; 
+  const ingredients = menu[i].ingredients;
+  for (let j=0; j < ingredients.length; j++) {
+   let ingredientName = ingredients[j];
+   let ingredientCost = ingredientsCost[ingredientName];
+   cost += ingredientCost;   
+  }
+   menu[i].cost = cost;
+  
+   alert(JSON.stringify(menu[i]));
+
+  
+ };
+ 
  
