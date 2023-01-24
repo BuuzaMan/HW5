@@ -1,0 +1,23 @@
+[
+    {
+    "name": "buuza",
+    "ingredients": ["mutton", "horsemeat", "beef", "onion", "salt", "pepper" ],
+    "price": 5000
+    },
+  
+   {
+   "name": "sushi",
+   "ingredients": ["salmon", "cottageCheese", "cucumber", "rice"],
+   "price": 600
+   },
+   {
+   "name": "salamat",
+   "ingredients": ["flour", "sourCream", "salt"],
+   "price": 250
+   },
+   {
+    "name": "green tea",
+    "ingredients": ["zavarka", "milk"],
+    "price": 70
+   }
+]
